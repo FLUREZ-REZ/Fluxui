@@ -1,27 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import 'features/3DScreen/3DScreen.dart';
 
-
-void main(){
-
-  runApp(MyApp());
-
-}
-
-class MyApp extends StatefulWidget {
-  const MyApp({super.key});
-
-  @override
-  State<MyApp> createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: MyMagazineScreen()
-
-    );
-  }
+void main() {
+  runApp(
+    ScreenUtilInit(
+      designSize: const Size(390, 844),
+      minTextAdapt: true,
+      splitScreenMode: true,
+      builder: (_, child) {
+        return MaterialApp(
+          debugShowCheckedModeBanner: false,
+          home: child,
+        );
+      },
+      child: MyMagazineScreen(),
+    ),
+  );
 }
