@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:o3d/o3d.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -16,20 +17,20 @@ class _MyMagazineScreenState extends State<MyMagazineScreen> {
 
   final List<MyProfile> models = [
     MyProfile(
-      "Explore / Dream / Discover / Enjoy",
-      "Think about what you Dream ,he found U",
+      "Explore / Dream  Discover / Enjoy",
+      "Think about what you Dream ,it found U",
     ),
     MyProfile(
       "Luxury Performance",
       "Experience power and elegance in motion",
     ),
     MyProfile(
-      "Feel The Speed",
-      "Built for drivers who seek excitement",
+      "Brutal Speed",
+      "Dodge delivers breathtaking acceleration that pushes adrenaline to the limit",
     ),
     MyProfile(
-      "Future Vision",
-      "Technology meets automotive perfection",
+      "King of the Drag Strip",
+      "Many Dodge models are engineered to dominate straight-line performance",
     ),
   ];
 
@@ -113,14 +114,14 @@ class _MyMagazineScreenState extends State<MyMagazineScreen> {
                         children: [
                           Text(
                             models[index].title,
-                            maxLines: 3,
+                            maxLines: 4,
                             overflow: TextOverflow.ellipsis,
                             style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 34.sp,
-                              fontWeight: FontWeight.bold,
-                              height: 1.15,
-                            ),
+                              fontSize: 32.sp ,
+                              height: 1.3 ,
+                              color: Colors.white ,
+                              fontFamily: 'fasttitle'
+                            )
                           ),
 
                           SizedBox(height: 20.h),
@@ -130,10 +131,10 @@ class _MyMagazineScreenState extends State<MyMagazineScreen> {
                             child: Text(
                               models[index].description,
                               style: TextStyle(
-                                color: Colors.white70,
-                                fontSize: 18.sp,
-                                height: 1.5,
-                              ),
+                                color: Colors.white70 ,
+                                fontSize: 20.sp ,
+                                height: 1.5
+                              )
                             ),
                           ),
                         ],
@@ -169,12 +170,10 @@ class _MyMagazineScreenState extends State<MyMagazineScreen> {
                   Row(
                     children: [
                       Text(
-                        "Explore",
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 18.sp,
-                          fontWeight: FontWeight.w600,
-                        ),
+                        "Travel", style: TextStyle(
+                        fontSize: 15 ,
+                        fontFamily: 'fast'
+                      )
                       ),
 
                       SizedBox(width: 15.w),
@@ -184,7 +183,7 @@ class _MyMagazineScreenState extends State<MyMagazineScreen> {
                         height: 55.w,
                         child: FloatingActionButton(
                           elevation: 3,
-                          backgroundColor: Colors.white,
+                          backgroundColor: Colors.black,
                           onPressed: () {
                             final currentPage =
                                 pagecontroller.page?.round() ?? 0;
@@ -199,9 +198,9 @@ class _MyMagazineScreenState extends State<MyMagazineScreen> {
                             }
                           },
                           child: Icon(
-                            Icons.arrow_forward_ios_sharp,
-                            size: 20.sp,
-                            color: Colors.black,
+                            Icons.outlined_flag_sharp,
+                            size: 25.sp,
+                            color: Colors.white,
                           ),
                         ),
                       ),
